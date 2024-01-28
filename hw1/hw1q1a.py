@@ -1,6 +1,7 @@
-import sys
+import fileinput
 
-rf = open(sys.argv[1])
-print(rf.read())
-rf.close()
+lines_of_data = fileinput.input()
+#print(type(lines_of_data))  # fileinput.FileInput
 
+for line in lines_of_data:
+    print(line)
